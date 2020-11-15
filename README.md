@@ -1,7 +1,7 @@
 # cs3219-task-D
 A 3 node Apache Kafka cluster using Docker that demonstrates the Pub-Sub messaging, with a Zookeeper ensemble created to manage the Kafka cluster.
 
-Tutorial: https://engineering.bitnami.com/articles/create-a-pub-sub-messaging-cluster-with-bitnami-s-kafka-and-zookeeper-containers.html
+Tutorial referenced: https://engineering.bitnami.com/articles/create-a-pub-sub-messaging-cluster-with-bitnami-s-kafka-and-zookeeper-containers.html
 
 ## Prerequisites
 Ensure you have Docker installed & running:
