@@ -56,4 +56,13 @@ this is another message
 ```
 
 ## Managing Zookeeper failover
-According to the [HBase documentation](http://hbase.apache.org/book.html#zookeeper), it is recommended that you run a ZooKeeper ensemble of 3, 5 or 7 machines; the more members an ensemble has, the more tolerant the ensemble is of host failures. In this project, I've used 3 ZooKeepers for failover management. As such, if one fails, another ZooKeeper would automatically take over as the leader.
+According to the [HBase documentation](http://hbase.apache.org/book.html#zookeeper), it is recommended that you run a ZooKeeper ensemble of 3, 5 or 7 machines; the more members an ensemble has, the more tolerant the ensemble is of host failures. In this project, I've used 3 ZooKeepers for failover management. As such, if one fails, another ZooKeeper would automatically take over as the leader. We can replicate this by
+finding the current leader,
+```
+docker exec -i -t <zk1/zk2/zk3> zkServer.sh status
+```
+termintating it,
+```
+docker kill <zk1/zk2/zk3>
+```
+and verifying that another ZooKeeper has taken over as leader (by repeating step 1 of part 3).
