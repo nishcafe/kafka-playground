@@ -61,7 +61,7 @@ finding the current leader,
 ```
 docker exec -i -t <zk1/zk2/zk3> zkServer.sh status
 ```
-termintating it,
+terminating it,
 ```
 docker kill <zk1/zk2/zk3>
 ```
