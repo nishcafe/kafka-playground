@@ -26,7 +26,7 @@ docker-compose up -d
 
 ## 2. Test the cluster (Pub-Sub Messaging)
 ### 2.1 Create a new topic 
-Create a new topic called *mytopic*
+Create a new topic called *mytopic*.
 
 ```
 docker exec -it kafka1 kafka-topics.sh --create --topic mytopic --bootstrap-server kafka1:9092, kafka2:9092, kafka3:9092
@@ -48,4 +48,4 @@ docker exec -it kafka3 kafka-console-producer.sh --topic mytopic --bootstrap-ser
 Return to the previous terminal shell (of the message consumer) to see if the messages have been recieved. They should be displayed right below the command.
 
 ## Managing Zookeeper failover
-According to the [HBase documentation](http://hbase.apache.org/book.html#zookeeper), it is recommended that you run a ZooKeeper ensemble of 3, 5 or 7 machines; the more members an ensemble has, the more tolerant the ensemble is of host failures. In this project, I've used 3 ZooKeepers for failure management. As such, if one fails, another ZooKeeper would automatically take over as the leader.
+According to the [HBase documentation](http://hbase.apache.org/book.html#zookeeper), it is recommended that you run a ZooKeeper ensemble of 3, 5 or 7 machines; the more members an ensemble has, the more tolerant the ensemble is of host failures. In this project, I've used 3 ZooKeepers for failover management. As such, if one fails, another ZooKeeper would automatically take over as the leader.
