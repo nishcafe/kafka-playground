@@ -47,5 +47,5 @@ docker exec -it kafka3 kafka-console-producer.sh --topic mytopic --bootstrap-ser
 ### 2.4 Verify if messages have been recieved
 Return to the previous terminal shell (of the message consumer) to see if the messages have been recieved. They should be displayed right below the command.
 
-## 3. Managing Zookeeper failover
+## Managing Zookeeper failover
 According to the [HBase documentation](http://hbase.apache.org/book.html#zookeeper), it is recommended that you run a ZooKeeper ensemble of 3, 5 or 7 machines; the more members an ensemble has, the more tolerant the ensemble is of host failures. In this project, I've used 3 ZooKeepers for failure management. As such, if one fails, another ZooKeeper would automatically take over as the leader.
