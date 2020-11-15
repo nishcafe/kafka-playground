@@ -65,4 +65,4 @@ terminating it,
 ```
 docker kill <zk1/zk2/zk3>
 ```
-and verifying that another ZooKeeper has taken over as leader (by repeating step 1 of part 3).
+and verifying that another ZooKeeper has taken over as leader (by repeating the first step of this section).
