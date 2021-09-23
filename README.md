@@ -1,15 +1,15 @@
 # Apache Kafka, Docker & Zookeeper
-A 3 node Apache Kafka cluster using Docker that demonstrates the Pub-Sub messaging, with a Zookeeper ensemble created to manage the Kafka cluster.
+A 3 node Apache Kafka cluster using Docker that demonstrates Pub-Sub messaging, with a Zookeeper ensemble to manage the Kafka cluster.
 
 ## Prerequisites
-Ensure you have Docker installed & running:
+Ensure Docker is installed & running:
 
 ```
 docker -v
 > Docker version 19.03.12, build 48a66213fe
 ```
 
-Additionally, make sure you have Docker Compose installed:
+as well as Docker Compose:
 
 ```
 docker-compose -v
